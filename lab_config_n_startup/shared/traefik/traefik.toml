@@ -1,0 +1,7 @@
+[entryPoints]
+	[entryPoints.web]
+		address = ":80"
+
+[providers]
+	[providers.file]
+		directory = "/conf"

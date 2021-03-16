@@ -1,0 +1,2 @@
+ifconfig eth0 10.10.0.11 netmask 255.255.255.0 up
+ip route add default via 10.10.0.1

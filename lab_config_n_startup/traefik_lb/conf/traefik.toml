@@ -1,0 +1,29 @@
+[http]
+	[http.routers]
+		[http.routers.whoami]
+			entryPoints=["web"]
+			rule="Host(`gik.de`)"
+			service="whoami"
+	[http.services]
+		[http.services.whoami]
+			[[http.services.whoami.weighted.services]]
+				name = "a1"
+				weight = 6
+			[[http.services.whoami.weighted.services]]
+				name = "a2"
+        weight = 3
+			[[http.services.whoami.weighted.services]]
+				name = "a3"
+				weight = 1
+		[http.services.a1]
+			[http.services.a1.loadBalancer]
+			  [[http.services.a1.loadBalancer.servers]]
+				  url="http://40.40.0.100"
+    [http.services.a2]
+			  [http.services.a2.loadBalancer]
+			    [[http.services.a2.loadBalancer.servers]]
+				    url="http://40.40.0.101"
+    [http.services.a3]
+		  	[http.services.a3.loadBalancer]
+			    [[http.services.a3.loadBalancer.servers]]
+				    url="http://40.40.0.102"

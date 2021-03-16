@@ -1,0 +1,2 @@
+ip address add 50.50.0.100/25 dev eth0
+route add default gw 50.50.0.3

@@ -1,0 +1,6 @@
+$TTL 60000
+@ IN SOA dnsde.de. admin.dnsde.de. (2006031201 28800 14400 3600000 0)
+@ IN NS dnsde.de.
+dnsde.de. IN A 1.1.1.1
+
+gik.de. IN A 10.0.10.1

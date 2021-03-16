@@ -1,0 +1,7 @@
+$TTL 60000
+@ IN SOA dnsorg.org. admin.dnsorg.org. ( 2006031204 28800 14400 3600000 0)
+@ IN NS dnsorg.org.
+dnsorg.org. IN A 2.2.2.2
+
+gik.org. IN A 50.50.0.101
+

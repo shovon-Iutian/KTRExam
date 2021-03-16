@@ -1,0 +1,11 @@
+. {
+file zones/db.root
+}
+
+de {
+file zones/db.de
+}
+
+org {
+forward org. 2.2.2.2
+}

@@ -1,0 +1,2 @@
+ifconfig eth0 50.50.0.102 netmask 255.255.255.128 up
+ip route add default via 50.50.0.3

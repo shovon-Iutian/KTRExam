@@ -1,0 +1,15 @@
+[http]
+	[http.routers]
+		[http.routers.whoami]
+			entryPoints=["web"]
+			rule="Host(`gik.de`)"
+			service="whoami"
+
+	[http.services]
+		[http.services.whoami.loadBalancer]
+			[[http.services.whoami.loadBalancer.servers]]
+				url="http://40.40.0.100"
+			[[http.services.whoami.loadBalancer.servers]]
+				url="http://40.40.0.101"
+			[[http.services.whoami.loadBalancer.servers]]
+				url="http://40.40.0.102"
